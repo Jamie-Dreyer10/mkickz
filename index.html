@@ -65,6 +65,24 @@ section{padding:4rem 0}
 .box p{color:var(--muted)}
 .box.hl{border-color:var(--turq)}
 
+.ann{background:var(--turq);color:#001214;font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.ann .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.2rem 1.5rem;padding-block:.55rem}
+header{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.92);backdrop-filter:blur(8px)}
+.eyebrow{display:block;color:var(--turq);font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.6rem}
+.trust{background:var(--panel);border-block:1px solid #1b2a2e}
+.trust .wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem 1.5rem;padding-block:1.5rem}
+.trust b{display:block;color:var(--turq);font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
+.trust span{color:var(--muted);font-size:.95rem}
+.prod{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
+.prod img{width:200px;max-width:100%;border-radius:14px}
+.chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.4rem;margin:.9rem 0}
+.chips li{border:1px solid var(--turq);color:var(--turq);border-radius:999px;padding:.15rem .8rem;font-size:.85rem;font-weight:600}
+.prod .price{font-family:var(--head);font-style:italic;font-weight:800;font-size:1.8rem;color:var(--turq)}
+.foot{display:grid;gap:2rem;text-align:left;padding-bottom:2rem}
+.foot img{width:130px;margin-bottom:.75rem}
+.foot h4{color:var(--turq);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.6rem}
+.foot a,.foot p{display:block;color:var(--muted);text-decoration:none;margin-bottom:.35rem}
+.foot a:hover{color:var(--turq)}
 .strip{background:var(--turq);color:#001214;font-family:var(--head);font-style:italic;font-weight:800;font-size:clamp(1rem,3.4vw,1.4rem)}
 .strip .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.25rem 1.5rem;padding-block:.9rem}
 .results{display:grid;gap:1.5rem}
@@ -96,12 +114,16 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
   .two{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:repeat(3,1fr)}
   .results{grid-template-columns:1fr 1fr}
+  .trust .wrap{grid-template-columns:repeat(4,1fr)}
+  .foot{grid-template-columns:1.4fr 1fr 1fr 1.2fr}
   .steps li{border-left:0;border-top:4px solid var(--turq);padding:1rem 0 0}
 }
 @media(max-width:560px){nav{display:none}}
 </style>
 </head>
 <body>
+
+<div class="ann"><div class="wrap"><span>Express service available</span><span>Standard clean: 4 working days</span><span>Book on WhatsApp</span></div></div>
 
 <header>
   <div class="wrap">
@@ -120,6 +142,7 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
   <div class="hero">
     <div class="wrap">
       <div>
+        <span class="eyebrow">Premium sneaker care</span>
         <h1>Fresh out the box. <span class="turq">Again.</span></h1>
         <p>Scuffs, stains and yellowed soles gone. MKICKZ is the sneaker laundry service that brings your favourite pairs back to life, from R70 a pair.</p>
         <div class="cta">
@@ -131,10 +154,16 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
     </div>
   </div>
 
-  <div class="strip"><div class="wrap"><span>Clean</span><span>Restore</span><span>Protect</span><span>From R70</span></div></div>
+  <div class="trust"><div class="wrap">
+    <div><b>Premium quality</b><span>Our own professional formula</span></div>
+    <div><b>Every material</b><span>Leather, suede, nubuck, canvas, mesh</span></div>
+    <div><b>Fast turnaround</b><span>Standard cleans in 4 working days</span></div>
+    <div><b>WhatsApp support</b><span>Message us any time</span></div>
+  </div></div>
 
   <section id="results" class="alt-bg">
     <div class="wrap">
+      <span class="eyebrow">See the difference</span>
       <h2>Real pairs. Real results.</h2>
       <p class="lead">These are client pairs we cleaned. The top photo is after, the bottom is before.</p>
       <div class="results">
@@ -146,12 +175,21 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
           <img src="results-2.jpeg" alt="White Nike Air Force 1 sneakers after cleaning (top) and before cleaning (bottom)" loading="lazy">
           <span class="tag a">After</span><span class="tag before b">Before</span>
         </figure>
+              <figure class="shot" style="--seam:49%">
+          <img src="results-3.jpeg" alt="Nike P-6000 silver sneakers after cleaning (top) and before cleaning (bottom)" loading="lazy">
+          <span class="tag a">After</span><span class="tag before b">Before</span>
+        </figure>
+        <figure class="shot" style="--seam:49%">
+          <img src="results-4.jpeg" alt="Blue Puma Suede sneakers after cleaning (top) and before cleaning (bottom)" loading="lazy">
+          <span class="tag a">After</span><span class="tag before b">Before</span>
+        </figure>
       </div>
     </div>
   </section>
 
   <section id="how">
     <div class="wrap">
+      <span class="eyebrow">Simple process</span>
       <h2>How it works</h2>
       <p class="lead">Most of our clients book on WhatsApp. It takes a minute.</p>
       <ol class="steps">
@@ -164,6 +202,7 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
 
   <section id="prices" class="alt-bg">
     <div class="wrap">
+      <span class="eyebrow">Services</span>
       <h2>Price list</h2>
       <p class="lead">Clean, restore, protect. Prices are per pair in rand.</p>
       <ul class="prices">
@@ -183,10 +222,18 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
 
   <section id="solution">
     <div class="wrap">
+      <span class="eyebrow">Featured product</span>
       <h2>Keep them clean at home</h2>
-      <div class="box hl">
-        <h3>MKICKZ Sneaker Cleaning Solution &middot; R100</h3>
-        <p>Our own formula, made by us for keeping your sneakers fresh between visits. Message us on WhatsApp to order a bottle.</p>
+      <div class="box hl prod">
+        <img src="product.png" alt="MKICKZ Sneaker Cleaning Solution 250ml spray bottle" loading="lazy">
+        <div>
+          <h3>MKICKZ Sneaker Cleaning Solution</h3>
+          <p>Premium sneaker cleaner, ready to use. Made in South Africa, 250ml.</p>
+          <ul class="chips"><li>Deep cleaning action</li><li>Restores like new</li><li>Biodegradable formula</li><li>Safe on all materials</li></ul>
+          <p>Suitable for leather, suede, nubuck, canvas and mesh.</p>
+          <p class="price">R100</p>
+          <a class="btn" data-wa href="#contact">Order on WhatsApp</a>
+        </div>
       </div>
     </div>
   </section>
@@ -209,7 +256,15 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
 </main>
 
 <footer>
-  <div class="wrap">&copy; <span id="yr">2026</span> MKICKZ Sneaker Laundry Service &middot; mkickz.co.za</div>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="logo.png" alt="MKICKZ logo"><p>Premium sneaker care. Clean, restore and protect your sneakers.</p></div>
+      <div><h4>Explore</h4><a href="#results">Results</a><a href="#how">How it works</a><a href="#prices">Prices</a><a href="#solution">Our solution</a></div>
+      <div><h4>Follow</h4><a href="https://www.instagram.com/mkickz_cpt" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@_mkickkzz_" target="_blank" rel="noopener">TikTok</a><a href="https://www.facebook.com/share/1Eefe9Lhva/" target="_blank" rel="noopener">Facebook</a></div>
+      <div><h4>Contact</h4><a data-wa href="#contact">WhatsApp: 083 269 9255</a><p>Cape Town</p><p>mkickz.co.za</p></div>
+    </div>
+    &copy; <span id="yr">2026</span> MKICKZ Sneaker Laundry Service
+  </div>
 </footer>
 
 <a class="wa-float" data-wa href="#contact">WhatsApp us</a>
