@@ -65,6 +65,23 @@ section{padding:4rem 0}
 .box p{color:var(--muted)}
 .box.hl{border-color:var(--turq)}
 
+.strip{background:var(--turq);color:#001214;font-family:var(--head);font-style:italic;font-weight:800;font-size:clamp(1rem,3.4vw,1.4rem)}
+.strip .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.25rem 1.5rem;padding-block:.9rem}
+.results{display:grid;gap:1.5rem}
+.shot{position:relative;margin:0;border-radius:18px;overflow:hidden;border:2px solid var(--turq)}
+.shot img{width:100%;height:auto}
+.tag{position:absolute;left:.75rem;font-family:var(--head);font-style:italic;font-weight:800;padding:.2rem .9rem;border-radius:6px;background:var(--turq);color:#001214}
+.tag.before{background:var(--black);color:var(--white);border:2px solid var(--sky)}
+.tag.a{top:2.5%}.tag.b{top:var(--seam)}
+.socials{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-top:1.5rem}
+.socials a{color:var(--muted);text-decoration:none;border:1px solid #23363b;padding:.4rem 1rem;border-radius:999px}
+.socials a:hover{color:var(--turq);border-color:var(--turq)}
+.prices{list-style:none;padding:0;border:1px solid #23363b;border-radius:16px;margin-bottom:1.5rem;overflow:hidden}
+.prices li{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 1.5rem;border-top:1px solid #23363b}
+.prices li:first-child{border-top:0}
+.prices p{color:var(--muted);font-size:.98rem}
+.prices strong{font-family:var(--head);font-style:italic;font-weight:800;font-size:1.5rem;color:var(--turq);white-space:nowrap}
+.turn{border-color:var(--sky)}
 .contact{text-align:center}
 .contact .lead{margin-inline:auto}
 .contact .cta{justify-content:center}
@@ -78,6 +95,7 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
   .hero .wrap{grid-template-columns:1.1fr .9fr}
   .two{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:repeat(3,1fr)}
+  .results{grid-template-columns:1fr 1fr}
   .steps li{border-left:0;border-top:4px solid var(--turq);padding:1rem 0 0}
 }
 @media(max-width:560px){nav{display:none}}
@@ -89,7 +107,9 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
   <div class="wrap">
     <a href="#top" aria-label="MKICKZ home"><img src="logo.png" alt="MKICKZ Sneaker Laundry Service logo"></a>
     <nav>
+      <a href="#results">Results</a>
       <a href="#how">How it works</a>
+      <a href="#prices">Prices</a>
       <a href="#solution">Our solution</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -100,8 +120,8 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
   <div class="hero">
     <div class="wrap">
       <div>
-        <h1>Bring your <span class="turq">kicks</span> back to life</h1>
-        <p>MKICKZ is a sneaker laundry service in Cape Town. We clean your pairs by hand and make our own sneaker cleaning solution so you can keep them fresh at home.</p>
+        <h1>Fresh out the box. <span class="turq">Again.</span></h1>
+        <p>Scuffs, stains and yellowed soles gone. MKICKZ is the sneaker laundry service that brings your favourite pairs back to life, from R70 a pair.</p>
         <div class="cta">
           <a class="btn" data-wa href="#contact">Book on WhatsApp</a>
           <a class="btn alt" href="#how">See how it works</a>
@@ -111,30 +131,62 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
     </div>
   </div>
 
-  <section id="how" class="alt-bg">
+  <div class="strip"><div class="wrap"><span>Clean</span><span>Restore</span><span>Protect</span><span>From R70</span></div></div>
+
+  <section id="results" class="alt-bg">
+    <div class="wrap">
+      <h2>Real pairs. Real results.</h2>
+      <p class="lead">These are client pairs we cleaned. The top photo is after, the bottom is before.</p>
+      <div class="results">
+        <figure class="shot" style="--seam:52%">
+          <img src="results-1.jpeg" alt="Air Jordan 13 sneakers after cleaning (top) and before cleaning (bottom)" loading="lazy">
+          <span class="tag a">After</span><span class="tag before b">Before</span>
+        </figure>
+        <figure class="shot" style="--seam:50%">
+          <img src="results-2.jpeg" alt="White Nike Air Force 1 sneakers after cleaning (top) and before cleaning (bottom)" loading="lazy">
+          <span class="tag a">After</span><span class="tag before b">Before</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
     <div class="wrap">
       <h2>How it works</h2>
       <p class="lead">Most of our clients book on WhatsApp. It takes a minute.</p>
       <ol class="steps">
         <li><h3>Send a photo</h3><p>Message us a picture of your pair and tell us what you need.</p></li>
         <li><h3>We clean them</h3><p>We clean your sneakers with our own solution and the right tools for the material.</p></li>
-        <li><h3>Get them back fresh</h3><p>We confirm when they are ready so you can collect them.</p></li>
+        <li><h3>Get them back fresh</h3><p>Standard cleans take 4 working days. Restorations take 7 to 9 working days.</p></li>
       </ol>
+    </div>
+  </section>
+
+  <section id="prices" class="alt-bg">
+    <div class="wrap">
+      <h2>Price list</h2>
+      <p class="lead">Clean, restore, protect. Prices are per pair in rand.</p>
+      <ul class="prices">
+        <li><div><h3>Standard clean</h3><p>Kids sneakers R70<br>Adult sneakers R120</p></div><strong>from R70</strong></li>
+        <li><div><h3>Premium clean</h3><p>Suede, nubuck, canvas and mesh materials</p></div><strong>R150</strong></li>
+        <li><div><h3>In-depth clean</h3><p>Full clean plus unyellowing soles</p></div><strong>R200</strong></li>
+        <li><div><h3>Sole repaint</h3></div><strong>R250</strong></li>
+        <li><div><h3>Unyellowing soles</h3></div><strong>R120</strong></li>
+        <li><div><h3>Express service</h3><p>Added to any clean, per pair</p></div><strong>+R50</strong></li>
+      </ul>
+      <div class="box turn">
+        <h3>Turnaround times</h3>
+        <p>Standard cleaning: 4 working days<br>Restorations: 7 to 9 working days</p>
+      </div>
     </div>
   </section>
 
   <section id="solution">
     <div class="wrap">
-      <h2>What we offer</h2>
-      <div class="two">
-        <div class="box hl">
-          <h3>Sneaker cleaning</h3>
-          <p>Professional cleaning for your everyday pairs and your favourites. Send us a photo for a quote.</p>
-        </div>
-        <div class="box">
-          <h3>MKICKZ Sneaker Cleaning Solution</h3>
-          <p>Our own formula, made for keeping your sneakers clean between visits. Ask us on WhatsApp how to get a bottle.</p>
-        </div>
+      <h2>Keep them clean at home</h2>
+      <div class="box hl">
+        <h3>MKICKZ Sneaker Cleaning Solution &middot; R100</h3>
+        <p>Our own formula, made by us for keeping your sneakers fresh between visits. Message us on WhatsApp to order a bottle.</p>
       </div>
     </div>
   </section>
@@ -142,10 +194,15 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
   <section id="contact" class="alt-bg contact">
     <div class="wrap">
       <h2>Ready to refresh your pair?</h2>
-      <p class="lead">Message us on WhatsApp for prices and bookings. You can also follow our work on Instagram.</p>
+      <p class="lead">Bookings and enquiries on WhatsApp: 083 269 9255. You can also follow our work on Instagram.</p>
       <div class="cta">
         <a class="btn" data-wa href="#contact">Chat on WhatsApp</a>
         <a class="btn alt" href="https://www.instagram.com/mkickz_cpt" target="_blank" rel="noopener">@mkickz_cpt on Instagram</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/mkickz_cpt" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@_mkickkzz_" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.facebook.com/share/1Eefe9Lhva/" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
   </section>
@@ -159,8 +216,8 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
 
 <script>
   // EDIT THIS: your WhatsApp number with country code, digits only (South Africa = 27, drop the leading 0).
-  // Example: 082 123 4567 becomes 27821234567
-  const WHATSAPP_NUMBER = "27000000000";
+  // Example: 083 269 9255 becomes 27832699255
+  const WHATSAPP_NUMBER = "27832699255";
   const MESSAGE = "Hi MKICKZ, I'd like to get my sneakers cleaned.";
   document.querySelectorAll("[data-wa]").forEach(function(a){
     a.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(MESSAGE);
