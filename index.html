@@ -49,7 +49,7 @@ nav a:hover{color:var(--turq)}
 .hero .wrap{display:grid;gap:2.5rem;align-items:center}
 .hero p{color:var(--muted);max-width:34rem;margin:1.25rem 0 1.75rem}
 .cta{display:flex;flex-wrap:wrap;gap:.75rem}
-.hero img{border-radius:18px;border:2px solid var(--turq);box-shadow:0 0 60px rgba(31,209,214,.25)}
+.hero img{width:100%;height:auto;display:block;-webkit-mask-image:linear-gradient(to right,transparent,#000 14%,#000 86%,transparent),linear-gradient(to bottom,transparent,#000 14%,#000 84%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 14%,#000 86%,transparent),linear-gradient(to bottom,transparent,#000 14%,#000 84%,transparent);mask-composite:intersect}
 
 section{padding:4rem 0}
 .alt-bg{background:var(--panel)}
@@ -86,11 +86,11 @@ header{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.92);backdrop-filt
 .strip{background:var(--turq);color:#001214;font-family:var(--head);font-style:italic;font-weight:800;font-size:clamp(1rem,3.4vw,1.4rem)}
 .strip .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.25rem 1.5rem;padding-block:.9rem}
 .results{display:grid;gap:1.5rem}
-.shot{position:relative;margin:0;border-radius:18px;overflow:hidden;border:2px solid var(--turq)}
-.shot img{width:100%;height:auto}
-.tag{position:absolute;left:.75rem;font-family:var(--head);font-style:italic;font-weight:800;padding:.2rem .9rem;border-radius:6px;background:var(--turq);color:#001214}
-.tag.before{background:var(--black);color:var(--white);border:2px solid var(--sky)}
-.tag.a{top:2.5%}.tag.b{top:var(--seam)}
+.shot{position:relative;margin:0;border-radius:18px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.06)}
+.shot img{width:100%;height:auto;display:block}
+.shot::after{content:"";position:absolute;left:0;right:0;top:var(--seam);height:4px;margin-top:-2px;background:var(--black)}
+.tag{position:absolute;left:1rem;top:1rem;font-family:var(--head);font-style:italic;font-weight:800;font-size:.85rem;letter-spacing:.04em;padding:.2rem .8rem;border-radius:999px;background:var(--turq);color:#001214;z-index:1}
+.tag.before{top:calc(var(--seam) + 1rem);background:rgba(0,0,0,.78);color:#fff}
 .socials{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-top:1.5rem}
 .socials a{color:var(--muted);text-decoration:none;border:1px solid #23363b;padding:.4rem 1rem;border-radius:999px}
 .socials a:hover{color:var(--turq);border-color:var(--turq)}
@@ -150,7 +150,7 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
           <a class="btn alt" href="#how">See how it works</a>
         </div>
       </div>
-      <img src="before-after.png" alt="A dirty pair of sneakers next to the same pair after a professional MKICKZ clean" width="1024" height="1280">
+      <img src="hero-after.jpg" alt="Sneakers after a professional MKICKZ clean, next to MKICKZ sneaker cleaning solution" width="1024" height="620">
     </div>
   </div>
 
@@ -165,24 +165,12 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
     <div class="wrap">
       <span class="eyebrow">See the difference</span>
       <h2>Real pairs. Real results.</h2>
-      <p class="lead">These are client pairs we cleaned. The top photo is after, the bottom is before.</p>
+      <p class="lead">Pairs we have cleaned for our clients. Top is after, bottom is before.</p>
       <div class="results">
-        <figure class="shot" style="--seam:52%">
-          <img src="results-1.jpeg" alt="Air Jordan 13 sneakers after cleaning (top) and before cleaning (bottom)" loading="lazy">
-          <span class="tag a">After</span><span class="tag before b">Before</span>
-        </figure>
-        <figure class="shot" style="--seam:50%">
-          <img src="results-2.jpeg" alt="White Nike Air Force 1 sneakers after cleaning (top) and before cleaning (bottom)" loading="lazy">
-          <span class="tag a">After</span><span class="tag before b">Before</span>
-        </figure>
-              <figure class="shot" style="--seam:49%">
-          <img src="results-3.jpeg" alt="Nike P-6000 silver sneakers after cleaning (top) and before cleaning (bottom)" loading="lazy">
-          <span class="tag a">After</span><span class="tag before b">Before</span>
-        </figure>
-        <figure class="shot" style="--seam:49%">
-          <img src="results-4.jpeg" alt="Blue Puma Suede sneakers after cleaning (top) and before cleaning (bottom)" loading="lazy">
-          <span class="tag a">After</span><span class="tag before b">Before</span>
-        </figure>
+        <figure class="shot" style="--seam:49.6%"><img src="results-1.jpeg" alt="Air Jordan 13 sneakers: after cleaning (top) and before (bottom)" loading="lazy"><span class="tag">After</span><span class="tag before">Before</span></figure>
+        <figure class="shot" style="--seam:48.8%"><img src="results-2.jpeg" alt="White Nike Air Force 1 sneakers: after cleaning (top) and before (bottom)" loading="lazy"><span class="tag">After</span><span class="tag before">Before</span></figure>
+        <figure class="shot" style="--seam:48.6%"><img src="results-3.jpeg" alt="Nike P-6000 silver sneakers: after cleaning (top) and before (bottom)" loading="lazy"><span class="tag">After</span><span class="tag before">Before</span></figure>
+        <figure class="shot" style="--seam:48.8%"><img src="results-4.jpeg" alt="Blue Puma Suede sneakers: after cleaning (top) and before (bottom)" loading="lazy"><span class="tag">After</span><span class="tag before">Before</span></figure>
       </div>
     </div>
   </section>
@@ -200,7 +188,7 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
     </div>
   </section>
 
-  <section id="prices" class="alt-bg">
+  <section id="prices">
     <div class="wrap">
       <span class="eyebrow">Services</span>
       <h2>Price list</h2>
@@ -238,7 +226,7 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
     </div>
   </section>
 
-  <section id="contact" class="alt-bg contact">
+  <section id="contact" class="contact">
     <div class="wrap">
       <h2>Ready to refresh your pair?</h2>
       <p class="lead">Bookings and enquiries on WhatsApp: 083 269 9255. You can also follow our work on Instagram.</p>
