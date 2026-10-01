@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MKICKZ | Sneaker Laundry Service, Cape Town</title>
+<meta name="description" content="Professional sneaker cleaning and our own sneaker cleaning solution. Message MKICKZ on WhatsApp to book.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#000;
+  --panel:#0d1417;
+  --turq:#1fd1d6;
+  --sky:#5cc8f5;
+  --white:#fff;
+  --muted:#a9bcc2;
+  --head:'Kanit','Arial Black',Impact,sans-serif;
+  --body:'Barlow','Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--head);font-style:italic;font-weight:800;line-height:1.05}
+h1{font-size:clamp(2.6rem,8vw,4.75rem)}
+h2{font-size:clamp(1.9rem,5vw,2.75rem);margin-bottom:1rem}
+h3{font-size:1.35rem;margin-bottom:.4rem}
+.turq{color:var(--turq)}
+
+header{padding:1rem 0;border-bottom:1px solid #1b2a2e}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+header img{width:64px;height:64px;border-radius:50%}
+nav{display:flex;gap:1.25rem;font-weight:600}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--turq)}
+
+.btn{display:inline-block;background:var(--turq);color:#001214;font-weight:600;text-decoration:none;padding:.9rem 1.6rem;border-radius:999px;border:2px solid var(--turq);transition:background .15s,color .15s}
+.btn:hover{background:transparent;color:var(--turq)}
+.btn.alt{background:transparent;color:var(--white);border-color:var(--sky)}
+.btn.alt:hover{background:var(--sky);color:#001214}
+
+.hero{padding:3rem 0 4rem}
+.hero .wrap{display:grid;gap:2.5rem;align-items:center}
+.hero p{color:var(--muted);max-width:34rem;margin:1.25rem 0 1.75rem}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem}
+.hero img{border-radius:18px;border:2px solid var(--turq);box-shadow:0 0 60px rgba(31,209,214,.25)}
+
+section{padding:4rem 0}
+.alt-bg{background:var(--panel)}
+.lead{color:var(--muted);max-width:38rem;margin-bottom:2rem}
+
+.steps{list-style:none;padding:0;display:grid;gap:1.25rem;counter-reset:s}
+.steps li{counter-increment:s;border-left:4px solid var(--turq);padding:.25rem 0 .25rem 1.25rem}
+.steps li::before{content:counter(s);font-family:var(--head);font-style:italic;font-weight:800;color:var(--turq);font-size:1.6rem;display:block;line-height:1}
+.steps p{color:var(--muted)}
+
+.two{display:grid;gap:1.5rem}
+.box{border:1px solid #23363b;border-radius:16px;padding:1.75rem}
+.box p{color:var(--muted)}
+.box.hl{border-color:var(--turq)}
+
+.contact{text-align:center}
+.contact .lead{margin-inline:auto}
+.contact .cta{justify-content:center}
+
+footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95rem;border-top:1px solid #1b2a2e}
+
+.wa-float{position:fixed;right:1rem;bottom:1rem;z-index:10;background:var(--turq);color:#001214;font-weight:600;text-decoration:none;padding:.85rem 1.3rem;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.6)}
+.wa-float:hover{background:var(--sky)}
+
+@media(min-width:800px){
+  .hero .wrap{grid-template-columns:1.1fr .9fr}
+  .two{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .steps li{border-left:0;border-top:4px solid var(--turq);padding:1rem 0 0}
+}
+@media(max-width:560px){nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#top" aria-label="MKICKZ home"><img src="logo.png" alt="MKICKZ Sneaker Laundry Service logo"></a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#solution">Our solution</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Bring your <span class="turq">kicks</span> back to life</h1>
+        <p>MKICKZ is a sneaker laundry service in Cape Town. We clean your pairs by hand and make our own sneaker cleaning solution so you can keep them fresh at home.</p>
+        <div class="cta">
+          <a class="btn" data-wa href="#contact">Book on WhatsApp</a>
+          <a class="btn alt" href="#how">See how it works</a>
+        </div>
+      </div>
+      <img src="before-after.png" alt="A dirty pair of sneakers next to the same pair after a professional MKICKZ clean" width="1024" height="1280">
+    </div>
+  </div>
+
+  <section id="how" class="alt-bg">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="lead">Most of our clients book on WhatsApp. It takes a minute.</p>
+      <ol class="steps">
+        <li><h3>Send a photo</h3><p>Message us a picture of your pair and tell us what you need.</p></li>
+        <li><h3>We clean them</h3><p>We clean your sneakers with our own solution and the right tools for the material.</p></li>
+        <li><h3>Get them back fresh</h3><p>We confirm when they are ready so you can collect them.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="solution">
+    <div class="wrap">
+      <h2>What we offer</h2>
+      <div class="two">
+        <div class="box hl">
+          <h3>Sneaker cleaning</h3>
+          <p>Professional cleaning for your everyday pairs and your favourites. Send us a photo for a quote.</p>
+        </div>
+        <div class="box">
+          <h3>MKICKZ Sneaker Cleaning Solution</h3>
+          <p>Our own formula, made for keeping your sneakers clean between visits. Ask us on WhatsApp how to get a bottle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="alt-bg contact">
+    <div class="wrap">
+      <h2>Ready to refresh your pair?</h2>
+      <p class="lead">Message us on WhatsApp for prices and bookings. You can also follow our work on Instagram.</p>
+      <div class="cta">
+        <a class="btn" data-wa href="#contact">Chat on WhatsApp</a>
+        <a class="btn alt" href="https://www.instagram.com/mkickz_cpt" target="_blank" rel="noopener">@mkickz_cpt on Instagram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="yr">2026</span> MKICKZ Sneaker Laundry Service &middot; mkickz.co.za</div>
+</footer>
+
+<a class="wa-float" data-wa href="#contact">WhatsApp us</a>
+
+<script>
+  // EDIT THIS: your WhatsApp number with country code, digits only (South Africa = 27, drop the leading 0).
+  // Example: 082 123 4567 becomes 27821234567
+  const WHATSAPP_NUMBER = "27000000000";
+  const MESSAGE = "Hi MKICKZ, I'd like to get my sneakers cleaned.";
+  document.querySelectorAll("[data-wa]").forEach(function(a){
+    a.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(MESSAGE);
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
