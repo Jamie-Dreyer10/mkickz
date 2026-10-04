@@ -1,224 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About Us | MKICKZ Sneaker Laundry Service, Cape Town</title>
-<meta name="description" content="Over 3 years of professional sneaker cleaning in Northpine, Cape Town. Meet MKICKZ and find our location.">
-<link rel="icon" href="logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --black:#000;
-  --panel:#0d1417;
-  --turq:#1fd1d6;
-  --sky:#5cc8f5;
-  --white:#fff;
-  --muted:#a9bcc2;
-  --head:'Kanit','Arial Black',Impact,sans-serif;
-  --body:'Barlow','Segoe UI',Arial,sans-serif;
-}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--white);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
-img{max-width:100%;display:block}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
-h1,h2,h3{font-family:var(--head);font-style:italic;font-weight:800;line-height:1.05}
-h1{font-size:clamp(2.6rem,8vw,4.75rem)}
-h2{font-size:clamp(1.9rem,5vw,2.75rem);margin-bottom:1rem}
-h3{font-size:1.35rem;margin-bottom:.4rem}
-.turq{color:var(--turq)}
-
-header{padding:1rem 0;border-bottom:1px solid #1b2a2e}
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
-header img{width:64px;height:64px;border-radius:50%}
-nav{display:flex;gap:1.25rem;font-weight:600}
-nav a{text-decoration:none;color:var(--muted)}
-nav a:hover{color:var(--turq)}
-
-.btn{display:inline-block;background:var(--turq);color:#001214;font-weight:600;text-decoration:none;padding:.9rem 1.6rem;border-radius:999px;border:2px solid var(--turq);transition:background .15s,color .15s}
-.btn:hover{background:transparent;color:var(--turq)}
-.btn.alt{background:transparent;color:var(--white);border-color:var(--sky)}
-.btn.alt:hover{background:var(--sky);color:#001214}
-
-.hero{padding:3rem 0 4rem}
-.hero .wrap{display:grid;gap:2.5rem;align-items:center}
-.hero p{color:var(--muted);max-width:34rem;margin:1.25rem 0 1.75rem}
-.cta{display:flex;flex-wrap:wrap;gap:.75rem}
-.hero img{width:100%;height:auto;display:block;-webkit-mask-image:linear-gradient(to right,transparent,#000 14%,#000 86%,transparent),linear-gradient(to bottom,transparent,#000 14%,#000 84%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 14%,#000 86%,transparent),linear-gradient(to bottom,transparent,#000 14%,#000 84%,transparent);mask-composite:intersect}
-
-section{padding:4rem 0}
-.alt-bg{background:var(--panel)}
-.lead{color:var(--muted);max-width:38rem;margin-bottom:2rem}
-
-.steps{list-style:none;padding:0;display:grid;gap:1.25rem;counter-reset:s}
-.steps li{counter-increment:s;border-left:4px solid var(--turq);padding:.25rem 0 .25rem 1.25rem}
-.steps li::before{content:counter(s);font-family:var(--head);font-style:italic;font-weight:800;color:var(--turq);font-size:1.6rem;display:block;line-height:1}
-.steps p{color:var(--muted)}
-
-.two{display:grid;gap:1.5rem}
-.box{border:1px solid #23363b;border-radius:16px;padding:1.75rem}
-.box p{color:var(--muted)}
-.box.hl{border-color:var(--turq)}
-
-.ann{background:var(--turq);color:#001214;font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
-.ann .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.2rem 1.5rem;padding-block:.55rem}
-header{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.92);backdrop-filter:blur(8px)}
-.eyebrow{display:block;color:var(--turq);font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.6rem}
-.trust{background:var(--panel);border-block:1px solid #1b2a2e}
-.trust .wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem 1.5rem;padding-block:1.5rem}
-.trust b{display:block;color:var(--turq);font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
-.trust span{color:var(--muted);font-size:.95rem}
-.prod{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
-.prod img{width:200px;max-width:100%;border-radius:14px}
-.chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.4rem;margin:.9rem 0}
-.chips li{border:1px solid var(--turq);color:var(--turq);border-radius:999px;padding:.15rem .8rem;font-size:.85rem;font-weight:600}
-.prod .price{font-family:var(--head);font-style:italic;font-weight:800;font-size:1.8rem;color:var(--turq)}
-.foot{display:grid;gap:2rem;text-align:left;padding-bottom:2rem}
-.foot img{width:130px;margin-bottom:.75rem}
-.foot h4{color:var(--turq);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.6rem}
-.foot a,.foot p{display:block;color:var(--muted);text-decoration:none;margin-bottom:.35rem}
-.foot a:hover{color:var(--turq)}
-.strip{background:var(--turq);color:#001214;font-family:var(--head);font-style:italic;font-weight:800;font-size:clamp(1rem,3.4vw,1.4rem)}
-.strip .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.25rem 1.5rem;padding-block:.9rem}
-.results{display:grid;gap:1.5rem}
-.shot{position:relative;margin:0;border-radius:18px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.06)}
-.shot img{width:100%;height:auto;display:block}
-.shot::after{content:"";position:absolute;left:0;right:0;top:var(--seam);height:4px;margin-top:-2px;background:var(--black)}
-.tag{position:absolute;left:1rem;top:1rem;font-family:var(--head);font-style:italic;font-weight:800;font-size:.85rem;letter-spacing:.04em;padding:.2rem .8rem;border-radius:999px;background:var(--turq);color:#001214;z-index:1}
-.tag.before{top:calc(var(--seam) + 1rem);background:rgba(0,0,0,.78);color:#fff}
-.socials{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-top:1.5rem}
-.socials a{color:var(--muted);text-decoration:none;border:1px solid #23363b;padding:.4rem 1rem;border-radius:999px}
-.socials a:hover{color:var(--turq);border-color:var(--turq)}
-.prices{list-style:none;padding:0;border:1px solid #23363b;border-radius:16px;margin-bottom:1.5rem;overflow:hidden}
-.prices li{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 1.5rem;border-top:1px solid #23363b}
-.prices li:first-child{border-top:0}
-.prices p{color:var(--muted);font-size:.98rem}
-.prices strong{font-family:var(--head);font-style:italic;font-weight:800;font-size:1.5rem;color:var(--turq);white-space:nowrap}
-.turn{border-color:var(--sky)}
-.contact{text-align:center}
-.contact .lead{margin-inline:auto}
-.contact .cta{justify-content:center}
-
-footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95rem;border-top:1px solid #1b2a2e}
-
-.wa-float{position:fixed;right:1rem;bottom:1rem;z-index:10;background:var(--turq);color:#001214;font-weight:600;text-decoration:none;padding:.85rem 1.3rem;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.6)}
-.wa-float:hover{background:var(--sky)}
-
-@media(min-width:800px){
-  .hero .wrap{grid-template-columns:1.1fr .9fr}
-  .two{grid-template-columns:1fr 1fr}
-  .steps{grid-template-columns:repeat(3,1fr)}
-  .results{grid-template-columns:1fr 1fr}
-  .trust .wrap{grid-template-columns:repeat(4,1fr)}
-  .foot{grid-template-columns:1.4fr 1fr 1fr 1.2fr}
-  .steps li{border-left:0;border-top:4px solid var(--turq);padding:1rem 0 0}
-}
-@media(max-width:700px){header .wrap{gap:.75rem}header img{width:52px;height:52px}nav{overflow-x:auto;white-space:nowrap;gap:1rem;font-size:.92rem;scrollbar-width:none}nav::-webkit-scrollbar{display:none}}
-.page-hero{padding:3rem 0 2rem}
-.page-hero .wrap{display:grid;gap:2rem;align-items:center}
-.page-hero p{color:var(--muted);max-width:36rem;margin-top:1rem}
-.page-hero img{width:240px;max-width:60%;margin:0 auto;border-radius:50%}
-.story{max-width:44rem}
-.story p{color:var(--muted);margin-bottom:1.1rem}
-.story p:first-of-type{color:var(--white);font-size:1.2rem}
-.facts{display:grid;gap:1.25rem;margin-top:2rem}
-.find{display:grid;gap:2rem;align-items:start}
-.find address{font-style:normal;color:var(--muted);margin:.5rem 0 1.25rem;font-size:1.15rem}
-.find address strong{color:var(--white)}
-.map{width:100%;height:340px;border:0;border-radius:18px;box-shadow:0 14px 40px rgba(0,0,0,.7);filter:grayscale(.3) contrast(1.05)}
-@media(min-width:800px){.page-hero .wrap{grid-template-columns:1.3fr .7fr}.facts{grid-template-columns:repeat(3,1fr)}.find{grid-template-columns:1fr 1.2fr}}
-</style>
-</head>
-<body>
-
-<div class="ann"><div class="wrap"><span>Express service available</span><span>Standard clean: 4 working days</span><span>Book on WhatsApp</span></div></div>
-
-<header>
-  <div class="wrap">
-    <a href="index.html" aria-label="MKICKZ home"><img src="logo.png" alt="MKICKZ Sneaker Laundry Service logo"></a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="index.html#results">Results</a>
-      <a href="index.html#prices">Prices</a>
-      <a href="about.html" style="color:var(--turq)">About us</a>
-      <a href="#find">Find us</a>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
-  <div class="page-hero">
-    <div class="wrap">
-      <div>
-        <span class="eyebrow">About us</span>
-        <h1>3+ years of bringing <span class="turq">kicks</span> back to life</h1>
-        <p>We have been in the sneaker cleaning industry for over three years, and Cape Town's sneakerheads keep sending us their pairs.</p>
-      </div>
-      <img src="logo.png" alt="MKICKZ Sneaker Laundry Service logo" width="240" height="240">
-    </div>
-  </div>
-
-  <section>
-    <div class="wrap">
-      <div class="story">
-        <p>MKICKZ started with a simple idea: a clean pair changes how you feel when you walk out the door.</p>
-        <p>Over the years we have cleaned everything from kids' school sneakers to collector pairs like Jordans, Air Force 1s and Nike runners. Every material needs different care, so we treat suede, nubuck, canvas, mesh and leather each in their own way.</p>
-        <p>We also got so particular about what goes on your shoes that we made our own sneaker cleaning solution, proudly South African and biodegradable. It is the same formula we trust on our clients' pairs, now available for you to use at home.</p>
-      </div>
-      <div class="facts">
-        <div class="box hl"><h3>3+ years</h3><p>Experience cleaning and restoring sneakers.</p></div>
-        <div class="box"><h3>Every material</h3><p>Leather, suede, nubuck, canvas and mesh.</p></div>
-        <div class="box"><h3>Our own formula</h3><p>Made in South Africa and sold by us.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="find" class="alt-bg">
-    <div class="wrap find">
-      <div>
-        <span class="eyebrow">Find us</span>
-        <h2>Visit MKICKZ</h2>
-        <address><strong>24 Eastwood Drive</strong><br>Northpine, Cape Town</address>
-        <p class="lead">Serving Northpine, Brackenfell and Kraaifontein. Message us on WhatsApp before you come so we can help you quicker.</p>
-        <div class="cta">
-          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=24+Eastwood+Drive+Northpine+Cape+Town" target="_blank" rel="noopener">Get directions</a>
-          <a class="btn alt" data-wa href="#find">Chat on WhatsApp</a>
-        </div>
-      </div>
-      <iframe class="map" title="Map showing MKICKZ at 24 Eastwood Drive, Northpine" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=24+Eastwood+Drive+Northpine+Cape+Town&output=embed"></iframe>
-    </div>
-  </section>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us & Community | Crossflow Towing</title><meta name="description" content="Crossflow Towing is a roadside assistance company that gives back to the community through food parcels, clothes and toys, and is recommended by the Ridgeworth Neighbourhood Watch."><link rel="icon" href="logo.png">
+<meta property="og:type" content="website"><meta property="og:title" content="About Crossflow Towing | Always there for the community"><meta property="og:description" content="More than a tow truck: fair prices, and food parcels, clothes and toys for the community."><meta property="og:url" content="https://crossflow-towing.jamiedreyer7.workers.dev/about.html"><meta property="og:image" content="https://crossflow-towing.jamiedreyer7.workers.dev/truck-hero.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;1,700;1,800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<!-- DEMO RIBBON START: delete this block at launch -->
+<div style="background:#ffb400;color:#000;text-align:center;font-family:var(--head);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;line-height:1.3;padding:.5rem 1rem">Demo preview &middot; Prepared for Crossflow Towing by JD Web Development &middot; Not yet live</div>
+<!-- DEMO RIBBON END -->
+<header><div class="wrap"><a href="index.html" aria-label="Crossflow Towing home"><img src="logo.png" alt="Crossflow Towing"></a>
+<nav><a href="index.html" class="keep">Home</a><a href="about.html" aria-current="page" class="keep">About &amp; community</a><a class="call" href="tel:+27817670857">Call now</a></nav></div></header>
+<main>
+<div class="hero" style="min-height:62vh;background-image:url(community-1.jpg);background-position:center 30%"><div class="wrap"><span class="eyebrow">About us</span>
+<h1><span class="chrome">More than</span><br>a tow truck.</h1>
+<p class="lead">Crossflow Towing is a roadside assistance company that is always there for the community.</p></div></div>
+<div class="hazard"></div>
+<section><div class="wrap"><span class="eyebrow">In the owner's words</span>
+<p class="big">&ldquo;I am no gangster and I do not associate myself with that life. We do not do drugs and we do not do alcohol. We work hard every day to do right by the people around us.&rdquo;</p>
+<p style="margin-top:1rem;color:var(--amber);font-family:var(--head);font-size:1.3rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700">Bertie, owner of Crossflow Towing</p></div></section>
+<section class="panel"><div class="wrap"><span class="eyebrow">Giving back</span><h2>Fair prices. A hand for the community.</h2>
+<div class="prose"><p>The Ridgeworth Neighbourhood Watch recognises what Crossflow Towing does for the neighbourhood. We do not overcharge, and we give back through food parcels, clothes, toys and more.</p>
+<p><strong>Crossflow Towing is always there for the community.</strong></p></div>
+<div class="pics"><img class="wide" src="community-3.jpg" alt="Children and community members with food parcels in front of a Crossflow Towing vehicle" loading="lazy"><img src="community-1.jpg" alt="Crossflow Towing team handing out food parcels to the community" loading="lazy"><img src="community-2.jpg" alt="Community members receiving food from the Crossflow Towing team" loading="lazy"></div></div></section>
+<section><div class="wrap"><span class="eyebrow">Recognition</span><h2>What they say about us.</h2>
+<div class="trust">
+<div class="quote"><p>Their team is approachable, helpful and willing to go the extra mile when assistance is required.</p><cite>Ridgeworth Neighbourhood Watch Exco</cite></div>
+<div class="quote"><p>We would confidently refer Crossflow Towing to other businesses or individuals requiring professional and dependable towing services.</p><cite>Braam Mong, Cape Sports Turf</cite></div>
+<div class="quote"><p>We have been very satisfied with their service and have found them to be a trustworthy service provider.</p><cite>Braam Mong, A to Z Land Solutions</cite></div></div></div></section>
+<div class="band"><div class="wrap"><div><h2>Need a tow or roadside help?</h2><p>Call Crossflow Towing. We are open 24 hours and on the majority of insurance panels.</p></div>
+<a class="btn" href="tel:+27817670857"><small>Call now</small>081 767 0857</a></div></div>
 </main>
-
-<footer>
-  <div class="wrap">
-    <div class="foot">
-      <div><img src="logo.png" alt="MKICKZ logo"><p>Premium sneaker care. Clean, restore and protect your sneakers.</p></div>
-      <div><h4>Explore</h4><a href="index.html#results">Results</a><a href="index.html#how">How it works</a><a href="index.html#prices">Prices</a><a href="index.html#solution">Our solution</a><a href="about.html">About us</a></div>
-      <div><h4>Follow</h4><a href="https://www.instagram.com/mkickz_cpt" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@_mkickkzz_" target="_blank" rel="noopener">TikTok</a><a href="https://www.facebook.com/share/1Eefe9Lhva/" target="_blank" rel="noopener">Facebook</a></div>
-      <div><h4>Contact</h4><a data-wa href="#find">WhatsApp: 083 269 9255</a><p>Cape Town</p><p>mkickz.co.za</p></div>
-    </div>
-    &copy; <span id="yr">2026</span> MKICKZ Sneaker Laundry Service
-  </div>
-</footer>
-
-<a class="wa-float" data-wa href="#find">WhatsApp us</a>
-
-<script>
-  // EDIT THIS: your WhatsApp number with country code, digits only (South Africa = 27, drop the leading 0).
-  // Example: 083 269 9255 becomes 27832699255
-  const WHATSAPP_NUMBER = "27832699255";
-  const MESSAGE = "Hi MKICKZ, I'd like to get my sneakers cleaned.";
-  document.querySelectorAll("[data-wa]").forEach(function(a){
-    a.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(MESSAGE);
-    a.target = "_blank"; a.rel = "noopener";
-  });
-  document.getElementById("yr").textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+<footer><div class="wrap"><div class="fgrid">
+<div><img src="logo.png" alt="Crossflow Towing"><p>Roadside and accident assistance. Always there for the community.</p></div>
+<div><h4>Contact us</h4><a href="tel:+27817670857">081 767 0857</a><a href="tel:+27826794101">082 679 4101</a><a href="mailto:crossflowtowing24@gmail.com" style="word-break:break-all">crossflowtowing24@gmail.com</a><a href="https://wa.me/27817670857?text=Hi%20Crossflow%2C%20I%20need%20roadside%20assistance.%20I%27ll%20send%20my%20location%20pin." target="_blank" rel="noopener">WhatsApp us</a><p>Open 24 hours</p></div>
+<div><h4>Find us</h4><p>1 Marlborough St, Windsor Park, Cape Town, 7570</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Crossflow+Towing&amp;query_place_id=ChIJxw__L81RzB0R3WrEy9-el8g" target="_blank" rel="noopener">Get directions</a><a href="about.html">About &amp; community</a></div>
+</div><p>&copy; <span id="yr">2026</span> Crossflow Towing. All rights reserved.</p></div></footer>
+<div class="callbar"><a href="tel:+27817670857">Call 081 767 0857</a><a href="https://wa.me/27817670857?text=Hi%20Crossflow%2C%20I%20need%20roadside%20assistance.%20I%27ll%20send%20my%20location%20pin." target="_blank" rel="noopener" style="background:#25D366;color:#fff">WhatsApp us</a></div>
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script></body></html>
