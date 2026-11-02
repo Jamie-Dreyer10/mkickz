@@ -103,7 +103,9 @@ header{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.92);backdrop-filt
 .socials a{color:var(--muted);text-decoration:none;border:1px solid #23363b;padding:.4rem 1rem;border-radius:999px}
 .socials a:hover{color:var(--turq);border-color:var(--turq)}
 .prices{list-style:none;padding:0;border:1px solid #23363b;border-radius:16px;margin-bottom:1.5rem;overflow:hidden}
-.prices li{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 1.5rem;border-top:1px solid #23363b}
+.prices li{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:.5rem 1.25rem;padding:1.1rem 1.5rem;border-top:1px solid #23363b}
+.prices li strong{text-align:right;min-width:5.5rem}
+@media(max-width:600px){.prices li{grid-template-columns:1fr auto;padding:1rem 1.15rem}.prices li>div{grid-column:1/-1}.prices li strong{text-align:left;min-width:0}}
 .prices li:first-child{border-top:0}
 .prices p{color:var(--muted);font-size:.98rem}
 .prices li .pbtn{padding:.45rem 1.1rem;font-size:.9rem;flex-shrink:0}
