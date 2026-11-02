@@ -109,6 +109,23 @@ header{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.92);backdrop-filt
 .prices li .pbtn{padding:.45rem 1.1rem;font-size:.9rem;flex-shrink:0}
 .prices strong{font-family:var(--head);font-style:italic;font-weight:800;font-size:1.5rem;color:var(--turq);white-space:nowrap}
 .turn{border-color:var(--sky)}
+.bf{background:radial-gradient(ellipse at 90% 0%,#0f4b52 0%,rgba(0,0,0,0) 55%),#020b0d;border-block:1px solid #1b2a2e;position:relative;overflow:hidden}
+.bf::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(31,209,214,.16) 2px,transparent 2.5px);background-size:28px 28px;pointer-events:none}
+.bf .wrap{position:relative}
+.bf-badge{display:inline-block;background:var(--sky);color:#00131a;font-family:var(--head);font-style:italic;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.35rem 1rem;border-radius:10px;font-size:.9rem;margin-bottom:.9rem;transform:rotate(-2deg);box-shadow:3px 3px 0 #fff}
+.bf h2 span{color:var(--turq)}
+.bf-grid{display:grid;gap:1rem;margin:1.5rem 0 1.25rem}
+.bf-card{border:2px solid var(--turq);border-radius:18px;padding:1.4rem 1.5rem;background:rgba(0,0,0,.45);display:flex;flex-direction:column;gap:.35rem}
+.bf-card h3{margin:0}
+.bf-card p{color:var(--muted);font-size:.95rem}
+.bf-price{display:flex;align-items:baseline;gap:.75rem;flex-wrap:wrap;margin-top:.4rem}
+.bf-price strong{font-family:var(--head);font-style:italic;font-weight:800;font-size:2.4rem;color:var(--turq);line-height:1}
+.bf-price s{color:var(--muted);font-size:1.05rem;text-decoration-color:#ff5a5a;text-decoration-thickness:2px}
+.bf-card .btn{margin-top:.7rem;align-self:flex-start;padding:.55rem 1.3rem;font-size:.95rem}
+.bf-combo{border-color:var(--sky);background:linear-gradient(120deg,rgba(31,209,214,.16),rgba(92,200,245,.10))}
+.bf-combo .pre{display:inline-block;align-self:flex-start;background:#fff;color:#00131a;font-weight:600;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .7rem;border-radius:999px}
+.bf-note{color:var(--muted);font-size:.9rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .contact{text-align:center}
 .contact .lead{margin-inline:auto}
 .contact .cta{justify-content:center}
@@ -119,6 +136,8 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
 .wa-float:hover{background:var(--sky)}
 
 @media(min-width:800px){
+  .bf-grid{grid-template-columns:repeat(4,1fr)}
+  .bf-combo{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
   .hero .wrap{grid-template-columns:1.1fr .9fr}
   .two{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:repeat(3,1fr)}
@@ -132,12 +151,13 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
 </head>
 <body>
 
-<div class="ann"><div class="wrap"><span>Express service available</span><span>Standard clean: 4 working days</span><span>Book on WhatsApp</span></div></div>
+<div class="ann"><div class="wrap"><span>Black Friday specials: November only</span><span>Standard clean: 4 working days</span><span>Book on WhatsApp</span></div></div>
 
 <header>
   <div class="wrap">
     <a href="#top" aria-label="MKICKZ home"><img src="logo.png" alt="MKICKZ Sneaker Laundry Service logo"></a>
     <nav>
+      <a href="#blackfriday">Black Friday</a>
       <a href="#results">Results</a>
       <a href="#how">How it works</a>
       <a href="#prices">Prices</a>
@@ -170,6 +190,50 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
     <div><b>Fast turnaround</b><span>Standard cleans in 4 working days</span></div>
     <div><b>WhatsApp support</b><span>Message us any time</span></div>
   </div></div>
+
+  <section id="blackfriday" class="bf" aria-labelledby="bf-h">
+    <div class="wrap">
+      <span class="bf-badge">Black Friday &middot; November only</span>
+      <h2 id="bf-h">Black Friday <span>specials</span></h2>
+      <p class="lead">Limited-time prices on our cleans. Book on WhatsApp to lock yours in.</p>
+      <div class="bf-grid">
+        <div class="bf-card">
+          <h3>Standard clean</h3>
+          <p>Adult sneakers. Kids sneakers R50.</p>
+          <div class="bf-price"><strong>R80</strong><s><span class="sr">was </span>R120</s></div>
+          <a class="btn" data-wa data-msg="Hi MKICKZ, I'd like the Black Friday Standard clean (R80)." href="#contact">Book</a>
+        </div>
+        <div class="bf-card">
+          <h3>Premium clean</h3>
+          <p>Suede, nubuck, canvas and mesh.</p>
+          <div class="bf-price"><strong>R100</strong><s><span class="sr">was </span>R150</s></div>
+          <a class="btn" data-wa data-msg="Hi MKICKZ, I'd like the Black Friday Premium clean (R100)." href="#contact">Book</a>
+        </div>
+        <div class="bf-card">
+          <h3>In-depth clean</h3>
+          <p>Full clean plus unyellowing soles.</p>
+          <div class="bf-price"><strong>R150</strong><s><span class="sr">was </span>R200</s></div>
+          <a class="btn" data-wa data-msg="Hi MKICKZ, I'd like the Black Friday In-depth clean (R150)." href="#contact">Book</a>
+        </div>
+        <div class="bf-card">
+          <h3>Kids standard clean</h3>
+          <p>Kids sneakers.</p>
+          <div class="bf-price"><strong>R50</strong><s><span class="sr">was </span>R70</s></div>
+          <a class="btn" data-wa data-msg="Hi MKICKZ, I'd like the Black Friday Kids standard clean (R50)." href="#contact">Book</a>
+        </div>
+        <div class="bf-card bf-combo">
+          <div>
+            <span class="pre">Pre-order only</span>
+            <h3>Clean + Solution combo</h3>
+            <p>One standard clean plus one 250ml MKICKZ Sneaker Cleaning Solution.</p>
+          </div>
+          <div class="bf-price"><strong>R170</strong></div>
+          <a class="btn" data-wa data-msg="Hi MKICKZ, I'd like to pre-order the Black Friday combo: Standard clean + 250ml Sneaker Cleaning Solution (R170)." href="#contact">Pre-order</a>
+        </div>
+      </div>
+      <p class="bf-note">Black Friday prices are per pair, in rand, and run in November 2026 only. Normal prices are in the price list below.</p>
+    </div>
+  </section>
 
   <section id="results" class="alt-bg">
     <div class="wrap">
@@ -259,9 +323,9 @@ footer{padding:2rem 0 5.5rem;text-align:center;color:var(--muted);font-size:.95r
       <div><img src="logo.png" alt="MKICKZ logo"><p>Premium sneaker care. Clean, restore and protect your sneakers.</p></div>
       <div><h4>Explore</h4><a href="#results">Results</a><a href="#how">How it works</a><a href="#prices">Prices</a><a href="#solution">Our solution</a><a href="about.html">About us</a></div>
       <div><h4>Follow</h4><a href="https://www.instagram.com/mkickz_cpt" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@_mkickkzz_" target="_blank" rel="noopener">TikTok</a><a href="https://www.facebook.com/share/1Eefe9Lhva/" target="_blank" rel="noopener">Facebook</a></div>
-      <div><h4>Contact</h4><a data-wa href="#contact">WhatsApp: 083 269 9255</a><p>Cape Town</p><p>mkickz.co.za</p></div>
+      <div><h4>Contact</h4><a data-wa href="#contact">WhatsApp: 083 269 9255</a><p>Cape Town</p><p>mkickzz.co.za</p></div>
     </div>
-    &copy; <span id="yr">2026</span> MKICKZ Sneaker Laundry Service
+    &copy; <span id="yr">2026</span> MKICKZ Sneaker Laundry Service &middot; Website by <a href="https://jdwebs.co.za" target="_blank" rel="noopener" style="color:var(--turq)">JD Webs</a>
   </div>
 </footer>
 
